@@ -11,25 +11,30 @@
             </head>
             <body>
                 <table>
-                    <xsl:apply-templates select="//client"/>
+                    <xsl:apply-templates select="//factura"/>
                 </table>
             </body>
         </html>
     </xsl:template>
 
-    <xsl:template match="client">
-        <xsl:variable name="codi_client" select="@codi"/>
-        <xsl:variable name="filtre" select="//factura[comprador/@codi=$codi_client and count(unitats)=4]"/>
-        <xsl:variable name="quants" select="count($filtre)"/>
-        <xsl:if test="$quants!=0">
+    <xsl:template match="factura">
+        <xsl:variable name="codi_client" select="comprador/@codi"/>
+        <xsl:variable name="client" select="//client[@codi=$codi_client]"/>
+        <tr>
+            <td><xsl:value-of select="@numero"/></td>
+            <td><xsl:value-of select="$client/nom"/></td>
+        </tr>
+        <xsl:for-each select="unitats">
+            <xsl:variable name="codi_producte" select="@codi"/>
+            <xsl:variable name="producte" select="//producte[@codi=$codi_producte]"/>
             <tr>
-                <td><xsl:value-of select="$codi_client"/></td>
-                <td><xsl:value-of select="nom"/></td>
-                <xsl:for-each select="$filtre">
-                    <td><xsl:value-of select="@numero"/></td>
-                </xsl:for-each>
+                <td><xsl:value-of select="$codi_producte"/></td>
+                <td><xsl:value-of select="producte"/></td>
+                <td><xsl:value-of select="."/></td>
+                <td><xsl:value-of select="producte/@preu"/></td>
+                <td><xsl:value-of select=". * $producte/@preu"/></td>
             </tr>
-        </xsl:if>
+        </xsl:for-each>
     </xsl:template>
     
 </xsl:stylesheet>
