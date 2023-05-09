@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lliga [
+    <!ELEMENT lliga (equip*, partit*)>
+
+    <!ELEMENT equip (nomEquip, jugadors, estadistiques?, pais, ciutat)>
+        <!ELEMENT nomEquip (#PCDATA)>
+        <!ELEMENT pais (#PCDATA)>
+        <!ELEMENT ciutat (#PCDATA)>
+        <!ELEMENT jugadors (jugador+)>
+            <!ELEMENT jugador (nom, dorsal, posicio, tanteos)>
+                <!ELEMENT nom (#PCDATA)>
+                <!ELEMENT dorsal (#PCDATA)>
+                <!ELEMENT posicio (#PCDATA)>
+                <!ELEMENT tanteos EMPTY>
+                <!ATTLIST juagador code ID #REQUIRED>
+        <!ELEMENT estadistiques (partitsJugats, partitsGuanyats, partitsEmpatats, partitsPerduts)>
+            <!ELEMENT partitsJugats EMPTY>
+            <!ELEMENT partitsGuanyats EMPTY>
+            <!ELEMENT partitsEmpatats EMPTY>
+            <!ELEMENT partitsPerduts EMPTY>
+        <!ATTLIST nomEquip code ID #REQUIRED>
+        
+    <!ELEMENT partit (equipLocal, equipVisitant, estadistica)>
+        <!ELEMENT equipLocal EMPTY>
+        <!ELEMENT equipVisitant EMPTY>
+        <!ELEMENT estadistica (resultat, faltes*)>
+            <!ELEMENT resultat EMPTY>
+            <!ELEMENT faltes EMPTY>
+            <!ATTLIST faltes jugador IDREF #REQUIRED>
+]>

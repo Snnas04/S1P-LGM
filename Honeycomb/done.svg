@@ -1,0 +1,86 @@
+
+
+<svg
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="-26 -15 52 90"
+        width="520" height="900">
+    <defs>
+        <mask id="retall">
+            <circle r="22" fill="white"/>
+            <g fill="black">
+                <circle r="20" cy="-30"/>
+                <circle r="20" cy="15" cx="26"/>
+                <circle r="20" cy="15" cx="-26"/>
+            </g>
+        </mask>
+        <radialGradient id="filling" gradientUnits="objectBoundingBox">
+            <stop stop-color="#fff" offset="0.45"/>
+            <stop stop-color="#000" offset="1"/>
+        </radialGradient>
+        <mask id="sombra">
+            <circle r="22" fill="url(#filling)"/>
+            <g fill="black">
+                <circle r="20" cy="-30"/>
+                <circle r="20" cy="15" cx="26"/>
+                <circle r="20" cy="15" cx="-26"/>
+            </g>
+        </mask>
+        <g id="objecte">
+            <circle r="22"/>
+            <g fill="black">
+                <circle r="22" cy="-30"/>
+                <circle r="22" cy="15" cx="26"/>
+                <circle r="22" cy="15" cx="-26"/>
+            </g>
+        </g>
+        <use id="sin" xlink:href="#objecte" mask="url(#retall)"/>
+        <use id="con" xlink:href="#objecte" mask="url(#sombra)"/>
+        <clipPath id="arriba">
+            <rect x="-23" y="-23" width="46" height="24"/>
+        </clipPath>
+        <clipPath id="abajo">
+            <rect x="-23" y="0" width="46" height="23"/>
+        </clipPath>
+        <use id="cero" xlink:href="#objecte" mask="url(#retall)"/>
+        <use id="ceroi" xlink:href="#objecte" mask="url(#retall)" transform="scale(1,-1)"/>
+        <g id="uno">
+            <use xlink:href="#sin" clip-path="url(#arriba)"/>
+            <use xlink:href="#con" clip-path="url(#abajo)"/>
+        </g>
+        <g id="unoi" transform="scale(1,-1)">
+            <use xlink:href="#sin" clip-path="url(#arriba)"/>
+            <use xlink:href="#con" clip-path="url(#abajo)"/>
+        </g>
+        <g id="dos">
+            <use xlink:href="#sin" clip-path="url(#abajo)"/>
+            <use xlink:href="#con" clip-path="url(#arriba)"/>
+        </g>
+        <g id="dosi" transform="scale(1,-1)">
+            <use xlink:href="#sin" clip-path="url(#abajo)"/>
+            <use xlink:href="#con" clip-path="url(#arriba)"/>
+        </g>
+    </defs>
+    <rect x="-27" y="-16" width="54" height="92" fill="#666"/>
+    <g fill="#333">
+        <circle r="21" cy="-30"/>
+        <circle r="21" cy="60"/>
+        <circle r="21" cy="15" cx="-26"/>
+        <circle r="21" cy="15" cx="26"/>
+    </g>
+    <g fill="white">
+        <use xlink:href="#dosi"/>
+        <use xlink:href="#unoi" y="45" x="26"/>
+        <use xlink:href="#unoi" y="45" x="-26"/>
+        <use xlink:href="#uno" y="30"/>
+        <use xlink:href="#cero" y="-15" x="-26"/>
+        <use xlink:href="#cero" y="-15" x="26"/>
+        <use xlink:href="#ceroi" y="15" x="-26"/>
+        <use xlink:href="#ceroi" y="15" x="26"/>
+        <use xlink:href="#dos" y="75" x="-26"/>
+        <use xlink:href="#dos" y="75" x="26"/>
+        <use xlink:href="#cero" y="60"/>
+    </g>
+
+</svg>
+

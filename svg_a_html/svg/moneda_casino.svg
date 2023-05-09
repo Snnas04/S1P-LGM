@@ -1,0 +1,14 @@
+<svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="-10 -10 20 20"
+        width="600"
+        height="600"
+>
+    <rect x="-10" y="-10" width="20" height="20" fill="#1d520d"/>
+    <g stroke-width="1.5">
+    <circle r="8" fill="none" stroke="#c00" stroke-dasharray="5.02656 5.02656"/>
+    <circle r="8" fill="none" stroke="#000" stroke-dasharray="5.02656 5.02656" stroke-dashoffset="5.02656"/>
+    </g>
+    <circle r="7" fill="#cf2222" stroke="#f1f1f1" stroke-width="0.5" />
+</svg>

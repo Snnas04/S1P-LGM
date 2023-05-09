@@ -1,0 +1,58 @@
+<svg 
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    width="520px"
+    height="900px"
+    viewBox="-26 -45 52 90">
+
+    <defs>
+        <!-- <polygon id="cubo" points="0 -30 26 -15 26 15 0 30 -26 15 -26 -15"/> -->
+        <radialGradient id="gradientTop" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="96%">
+            <stop offset="0%" stop-color="#aa47fa" />
+            <stop offset="100%" stop-color="#2a0950" />
+        </radialGradient>
+        <radialGradient id="gradientRight" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="96%">
+            <stop offset="0%" stop-color="#6e16d3" />
+            <stop offset="100%" stop-color="#2a0950" />
+        </radialGradient>
+        <radialGradient id="gradientLeft" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="96%">
+            <stop offset="0%" stop-color="#4e1994" />
+            <stop offset="100%" stop-color="#2a0950" />
+        </radialGradient>
+
+        <g id="newcube" shape-rendering="geometricPrecision">
+            <polygon points="0 0 26 -15 0 -30 -26 -15 " fill="url(#gradientTop)" />
+            <polygon points="0 0 0 30 26 15 26 -15" fill="url(#gradientRight)" />
+            <polygon points="0 0 -26 -15 -26 15 0 30" fill="url(#gradientLeft)" />
+            <!-- <polygon points="0 -7.5 13 -15 0 -22.5" fill="url(#gradientLeft)"/>
+            <polygon points="0 -7.5 -13 -15 0 -22.5" fill="url(#gradientRight)"/> -->
+        </g>
+
+        <g id="newcube2" >
+            <use xlink:href="#newcube" transform="scale(-0.75)" />
+            <use xlink:href="#newcube" transform="scale(0.5)" />
+            <use xlink:href="#newcube" transform="scale(-0.25)" />
+        </g>
+    </defs>
+    <!-- <g stroke="#ff8800" fill="#cc0000">
+        <use xlink:href="#cubo"/>
+        <use xlink:href="#cubo" x="26" y="-45"/>
+        <use xlink:href="#cubo" x="26" y="45"/>
+        <use xlink:href="#cubo" x="-26" y="-45"/>
+        <use xlink:href="#cubo" x="-26" y="45"/>
+    </g> -->
+    <g>
+        <use xlink:href="#newcube"/>
+        <use xlink:href="#newcube" x="26" y="-45"/>
+        <use xlink:href="#newcube" x="26" y="45"/>
+        <use xlink:href="#newcube" x="-26" y="-45"/>
+        <use xlink:href="#newcube" x="-26" y="45"/>
+    </g>
+    <g>
+        <use xlink:href="#newcube2"/>
+        <use xlink:href="#newcube2" x="26" y="-45"/>
+        <use xlink:href="#newcube2" x="26" y="45"/>
+        <use xlink:href="#newcube2" x="-26" y="-45"/>
+        <use xlink:href="#newcube2" x="-26" y="45"/>
+    </g>
+</svg>

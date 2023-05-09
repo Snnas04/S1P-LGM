@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="-5 -5 10 10"> <!-- el -5 -5 indica el nou punt 0 0 -->
+    <rect x="-5" y="-5" width="10" height="10" fill="#00ccff" />
+    <g  fill="none" stroke-width="0.2">        
+        <circle r="4.5" stroke="#e6ff06"/>
+        <rect x="-4" y="-4" width="8" height="8" stroke="#077bff"/>
+        <polygon points="0 -5 5 5 -5 5" stroke="#cc0000"/>
+        <polygon points="-3 -3 3 -3 -3 3 3 3" stroke="#21e20f"/>
+    </g>
+    <!-- amb fill especificam un color, i stroke fa un borde, indicam el color del borde,
+    si en lloc de posar un color posam *none* es torna transparent
+    amb <g> feim un grupo, per posar els continguts que tenguin amb comu -->
+</svg>

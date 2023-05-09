@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title> Horari S1P</title>
+    <style>
+        @font-face {
+            font-family: hack;
+            src: url("/home/snnas/Programacio/lgm/fonts/Hack Regular Nerd Font Complete Mono.ttf");
+        }
+        @font-face {
+            font-family: b-hack;
+            src: url("/home/snnas/Programacio/lgm/fonts/Hack Bold Nerd Font Complete Mono.ttf");
+        }
+        @font-face {
+            font-family: agave;
+            src: url("/home/snnas/Programacio/lgm/fonts/agave regular Nerd Font Complete Mono.ttf");
+        }
+
+        #horari {
+            width: 900px;
+            height: 640px;
+            margin: auto;
+        }
+        #titol {
+            width: 900px;
+            height: 100px;
+            color: #fff022d5;
+            font-family: agave;
+            font-size: 36pt;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #hores {
+            width: 100px;
+            height: 640px;
+            float: left;
+        }
+        #grup {
+            height: 40px;
+            background-color: #343977;
+            color: #fff022d5;
+            font-family: b-hack;
+            font-size: 18pt;
+        }
+
+        .dies {
+            width: 160px;
+            height: 640px;
+            background-color: #ff2bb8;
+            float: left;
+        }
+        .dia {
+            width: 160px;
+            height: 40px;
+            background-color: #98bbd1;
+        }
+        .hora {
+            height: 100px;
+            background-color: #98bbd1;
+        }
+
+        .sin {
+            background: #e63326cc;
+        }
+        .pro {
+            background: #f824aecc;
+        }
+        .bdd {
+            background: #ffc012cc;
+        }
+        .lgm {
+            background: #26aef2cc;
+        }
+        .edd {
+            background: #a526bbcc;
+        }
+        .fol {
+            background: #40e64ecc;
+        }
+
+        .una_hora {
+            height: 100px;
+        }
+        .dues_hores {
+            height: 200px;
+        }
+        .tres_hores {
+            height: 300px;
+        }
+
+        #grup, .hora, .dia, .una_hora, .dues_hores, .tres_hores {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #13111b;
+        }
+        .sin, .pro, .bdd, .edd, .lgm, .fol {
+            color: #13111b;
+            font-family: hack;
+            font-size: 12pt;
+        }
+        .hora, .dies {
+            color: #13111b;
+            font-family: b-hack;
+            font-size: 15pt;
+        }
+
+        div {
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #16162c;
+        }
+    </style>
+</head>
+<body>
+    <div id="horari">
+        <div id="titol">Horari 2022-23</div>
+        <div id="hores">
+            <div id="grup">S1P</div>
+            <div class="hora">15:10<br>16:05</div>
+            <div class="hora">16:05<br>17:00</div>
+            <div class="hora">17:15<br>18:10</div>
+            <div class="hora">18:10<br>19:05</div>
+            <div class="hora">19:20<br>20:15</div>
+            <div class="hora">20:15<br>21:10</div>
+        </div>
+        <div class="dies"> 
+            <div class="dia">Dilluns</div>
+            <div class="sin dues_hores">Sistemes<br>Informàtics</div>
+            <div class="pro dues_hores">Programació</div>
+            <div class="bdd dues_hores">Database<br>Managament</div>
+        </div>
+        <div class="dies"> 
+            <div class="dia">Dimarts</div>
+            <div class="lgm dues_hores">Llenguatges<br>de Marques</div>
+            <div class="pro dues_hores">Programació</div>
+            <div class="bdd dues_hores">Database<br>Managament</div>
+        </div>
+        <div class="dies"> 
+            <div class="dia">Dimecres</div>
+            <div class="fol una_hora">Formacio i<br>Orientacio<br>Laboral</div>
+            <div class="bdd dues_hores">Database<br>Managament</div>
+            <div class="edd tres_hores">Entorns de<br>Desenvolupament</div>
+        </div>
+        <div class="dies"> 
+            <div class="dia">Dijous</div>
+            <div class="pro tres_hores">Programació</div>
+            <div class="sin tres_hores">Sistemes<br>Informàtics</div>
+        </div>
+        <div class="dies"> 
+            <div class="dia">Divendres</div>
+            <div class="bdd dues_hores">Database<br>Managament</div>
+            <div class="fol dues_hores">Formació i<br>Orientació<br>Laboral</div>
+            <div class="lgm dues_hores">Llenguatges<br>de Marques</div>
+        </div>
+    </div>
+</body>
+</html>

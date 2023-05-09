@@ -1,0 +1,103 @@
+/* Tipografias */
+@font-face {
+    font-family: sono-extraBold;
+    src: url("../fonts/sono/web/Sono-ExtraBold.woff2");
+}
+
+@font-face {
+    font-family: sono-bold;
+    src: url("../fonts/sono/web/Sono-Bold.woff2");
+}
+
+@font-face {
+    font-family: sono-semiBold;
+    src: url("../fonts/sono/web/Sono-SemiBold.woff2");
+}
+
+@font-face {
+    font-family: sono-medium;
+    src: url("../fonts/sono/web/Sono-Medium.woff2");
+}
+
+@font-face {
+    font-family: sono-regular;
+    src: url("../fonts/sono/web/Sono-Regular.woff2");
+}
+
+@font-face {
+    font-family: sono-light;
+    src: url("../fonts/sono/web/Sono-Light.woff2");
+}
+
+@font-face {
+    font-family: sono-extraLight;
+    src: url("../fonts/sono/web/Sono-ExtraLight.woff2");
+}
+
+@font-face {
+    font-family: Ubuntu;
+    src: url("../fonts/Ubuntu/Ubuntu\ Nerd\ Font\ Complete.ttf");
+}
+
+
+/* Estils de la web */
+:root {
+    /* --accent: #dd1818; */
+    --accent: #8cc63e;
+    --text: #041119;
+    --second-accent: #00469e;
+    --background: #082233;
+}
+
+h2 {
+    margin-top: 150px;
+    color: var(--accent);
+    font-family: sono-semiBold;
+}
+
+h3 {
+    color: var(--second-accent);
+    font-family: sono-regular;
+}
+
+h4 {
+    color: var(--accent);
+    font-family: sono-semiBold;
+}
+
+p {
+    color: var(--text);
+    font-size: 10pt;
+    font-family: Ubuntu;
+}
+
+div {
+    color: var(--text);
+    font-size: 14pt;
+    font-family: Ubuntu;
+}
+
+/* llevar l'estil per defete */
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #fff;
+}
+
+/* tamany del contingut i les img per defecte */
+.content {
+    width: 1200px;
+    margin: auto;
+}
+
+img {
+    width: 1200px;
+}
+
+
+/* tamany minim de la classe contingut */
+.content {
+    min-height: 1200px;
+}

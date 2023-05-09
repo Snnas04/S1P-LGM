@@ -1,0 +1,83 @@
+/* el calc es calcula el que poses entre parentesis 
+--nom seria com una variable
+var(--nom) per cridar la variable*/
+
+:root {
+    --imatges: 8;
+    --am_petita: 160px;
+    --am_gran: calc(var(--imatges) * var(--am_petita));
+    --al_petita: 90px;
+    --al_gran: calc(var(--imatges) * var(--al_petita));
+}
+
+body {
+    background: #16162c;
+}
+
+/* tots els divs */
+div {
+    /* per podr centrar */
+    width: fit-content;
+    margin: auto;
+}
+
+/* mostrar img cursor */
+img:nth-of-type(2n+1):hover + img {
+    z-index: 1;
+}
+
+/* les dues primeres */
+div:nth-of-type(-n+2) {
+    display: grid;
+    grid-template-columns: repeat(var(--imatges), var(--am_petita));
+    grid-template-rows: var(--al_petita) calc(var(--al_gran) - var(--al_petita)) var(--al_petita);
+}
+
+/* les dues derreres */
+div:nth-of-type(n+3) {
+    display: grid;
+    grid-template-columns: var(--am_petita) calc(var(--am_gran) - var(--am_petita)) var(--am_petita);
+    grid-template-rows: repeat(var(--imatges), var(--al_petita));
+}
+
+
+/* img petites (impares) */
+img:nth-of-type(2n+1) {
+    width: var(--am_petita);
+}
+
+/* les grans (pares) */
+img:nth-of-type(2n) {
+    width: var(--am_gran);
+}
+
+/* colocaciar les petites a adalt */
+div:nth-of-type(1) > img:nth-of-type(2n) {
+    /* es compten les lineas no les columnes */
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+/* colocar les petites abaix */
+div:nth-of-type(2) > img:nth-of-type(2n) {
+    /* de la columna 1 i ocupa 8 forats */
+    grid-column: 1 / span 8;
+    /* de la fila 1 i ocupa 2 forats */
+    grid-row: 1 / span 2;
+    /* si no posam span hem de posar fins a quina columna */
+}
+
+/* les petites a la esquerra */
+div:nth-of-type(3) > img:nth-of-type(2n) {
+    /* primer les dues files i despres les dues columnes 
+    flia 1 i columna 4, la fila acaba a la 4 i la columna a la 4*/
+    grid-area: 1 / 2 / 9 / 4;
+}
+
+/* les petites a la dreta */
+div:nth-of-type(4) > img:nth-of-type(2n) {
+    grid-area: 1 / 1 / 9 / 3;
+}
+

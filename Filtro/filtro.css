@@ -1,0 +1,14 @@
+img {
+    position: absolute;
+    width: 960px;
+    filter: brightness(80%);
+    filter: contrast(50%);
+    filter: saturate(10);
+    filter: opacity(10%);
+}
+
+body > div {
+    display: grid;
+    grid-template-columns: repeat(10, 96px);
+    grid-template-rows: repeat(4, 135px);
+}

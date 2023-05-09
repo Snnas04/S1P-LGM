@@ -1,0 +1,29 @@
+.content {
+    margin-top: -100px;
+}
+
+.content > img {
+    border: 5px solid var(--accent);
+}
+
+#circuit {
+    display: grid;
+    align-content: center;
+    grid-template-columns: repeat(3, auto);
+}
+
+#circuit img {
+    width: 800px;
+}
+
+#circuit div:nth-of-type(2) div {
+    margin-top: 25px;
+    font-family: sono-bold;
+    font-size: 30pt;
+    color: var(--text);
+}
+
+#circuit div:nth-of-type(2) {
+    display: grid;
+    grid-template-rows: auto;
+}

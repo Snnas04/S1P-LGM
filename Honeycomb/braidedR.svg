@@ -1,0 +1,51 @@
+
+
+<svg
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="-26 -15 52 90"
+        width="520" height="900">
+    <defs>
+        <mask id="mask">
+            <circle r="22" fill="white"/>
+            <g fill="black">
+                <circle r="20" cy="-30"/>
+                <circle r="20" cy="15" cx="26"/>
+                <circle r="20" cy="15" cx="-26"/>
+            </g>
+        </mask>
+        <g id="down" mask="url(#mask)">
+            <circle r="22"/>
+            <g fill="black">
+                <circle r="23" cy="-30"/>
+                <circle r="23" cy="15" cx="26"/>
+                <circle r="23" cy="15" cx="-26"/>
+            </g>
+        </g>
+        <use id="up" xlink:href="#down" transform="scale(1,-1)"/>
+    </defs>
+    
+    <rect x="-27" y="-16" width="54" height="92" fill="gray"/>
+    <g fill="#333">
+        <circle r="21" cy="-30"/>
+        <circle r="21" cy="60"/>
+        <circle r="21" cy="15" cx="-26"/>
+        <circle r="21" cy="15" cx="26"/>
+    </g>
+    <g fill="red">
+        <use xlink:href="#up"/>
+        <use xlink:href="#up" y="45" x="26"/>
+        <use xlink:href="#up" y="45" x="-26"/>
+    </g>
+    <g fill="white">
+        <use xlink:href="#down" y="30"/>
+        <use xlink:href="#down" y="-15" x="-26"/>
+        <use xlink:href="#down" y="-15" x="26"/>
+        <use xlink:href="#up" y="15" x="-26"/>
+        <use xlink:href="#up" y="15" x="26"/>
+        <use xlink:href="#down" y="75" x="-26"/>
+        <use xlink:href="#down" y="75" x="26"/>
+    </g>
+    <use fill="red" xlink:href="#down" y="60"/>
+</svg>
+

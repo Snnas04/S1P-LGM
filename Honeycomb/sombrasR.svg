@@ -1,0 +1,55 @@
+<svg
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="-50 -50 100 100"
+        width="600" height="600">
+    <defs>
+        <radialGradient id="filling" gradientUnits="objectBoundingBox">
+            <stop stop-color="#fff" offset="0.5"/>
+            <stop stop-color="#222" offset="1"/>
+        </radialGradient>
+        <mask id="maskOne">
+            <circle r="22" fill="white"/>
+            <g fill="black">
+                <circle r="22" cy="30"/>
+                <circle r="22" cy="-15" cx="-26"/>
+                <circle r="22" cy="-15" cx="26"/>
+            </g>
+        </mask>
+        <mask id="maskTwo">
+            <circle r="22" fill="url(#filling)"/>
+            <g fill="black">
+                <circle r="22" cy="30"/>
+                <circle r="22" cy="-15" cx="-26"/>
+                <circle r="22" cy="-15" cx="26"/>
+            </g>
+        </mask>
+        <clipPath id="clipUp">
+            <rect x="-50" y="-50" width="100" height="50"/>
+        </clipPath>
+        <clipPath id="clipDown">
+            <rect x="-50" y="-1" width="100" height="50"/>
+        </clipPath>
+        <g id="objectOne">
+            <circle r="22" mask="url(#maskOne)" clip-path="url(#clipUp)"/>
+            <circle r="22" mask="url(#maskTwo)" clip-path="url(#clipDown)"/>
+        </g>
+        <g id="objectTwo">
+            <circle r="22" mask="url(#maskOne)" clip-path="url(#clipDown)"/>
+            <circle r="22" mask="url(#maskTwo)" clip-path="url(#clipUp)"/>
+        </g>
+    </defs>
+    <rect x="-50" y="-50" width="100" height="100" fill="black"/>
+
+    <g fill="#fff">
+        <use xlink:href="#objectOne" />
+        <use xlink:href="#objectOne" x="-26" y="-15" />
+        <use xlink:href="#objectOne" x="26" y="-15" />
+        <use xlink:href="#objectTwo" y="30" />
+        <use xlink:href="#objectTwo" x="-26" y="15" />
+        <use xlink:href="#objectTwo" x="26" y="15" />
+        <use xlink:href="#objectTwo" x="-26" y="-45" />
+        <use xlink:href="#objectTwo" x="26" y="-45" />
+    </g>
+</svg>
+

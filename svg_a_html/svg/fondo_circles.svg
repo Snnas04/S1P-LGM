@@ -1,0 +1,13 @@
+<svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    width="400px"
+    height="400px"
+    viewBox="-10 -10 20 20">
+
+    <circle r="6.5" fill="#ebee45"/>
+    <circle r="6.5" cx="-10" cy="-10" fill="#ff008c"/>
+    <circle r="6.5" cx="-10" cy="10" fill="#ff008c"/>
+    <circle r="6.5" cx="10" cy="-10" fill="#ff008c"/>
+    <circle r="6.5" cx="10" cy="10" fill="#ff008c"/>
+
+</svg>

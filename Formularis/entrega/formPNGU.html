@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PNGU iniciar</title>
+    <link rel="stylesheet" href="./styleFrom.css">   
+</head>
+<body>
+    <div id="topBar">
+        <img src="./Logo.svg"/>
+        <div id="canviant">Iniciar Sessió</div>
+    </div>
+
+    <form id="PNGU" method="get" novalidate="novalidate" onsubmit="return validation();">
+        <!-- Començar formulari -->
+        <div id="start">
+            <div>
+                <label for="color">Tria un color: </label>
+                <br/>
+                <input type="color" id="color" name="color">    
+            </div>
+            <div>
+                <button type="button" id="create">Crear compte</button>
+            </div>
+        </div>
+
+        <!-- Part 1 del formulari -->
+        <div id="part1">
+            <label for="User"> Usuari: <span></span></label>
+            <input type="text" id="User" name="Usuari"
+                placeholder="ID d'Usuari"
+                title="Introdueix el teu nom d'usuari"
+            />
+
+            <label for="Name"> Nom: <span></span></label>
+            <input type="text" id="Name" name="Nom"
+                placeholder="Nom i llinatges"
+                title="Introdueix el teu nom"
+            />
+
+            <label for="eMail"> Email: <span></span></label>
+            <input type="text" id="eMail" name="email"
+                placeholder="Correu electronic"
+                title="Introdueix el teu correu electronic"
+            />
+
+            <label for="pw"> Contrasenya: <span></span></label>
+            <input type="password" id="Name" name="Nom"
+                placeholder="Contrasenya"
+                title="Introdueix la teva contrasenya"
+            />
+
+            <label for="phone"> Telefon: <span></span></label>
+            <input type="text" id="phone" name="phone"
+                placeholder="Numero de telefon"
+                title="Introdueix el teu numero de telefon"
+            />
+            <label for="date"> Data de naixament: <span></span></label>
+            <input type="date" id="date" name="date"
+                title="Introdueix la teva data de naixament"
+            />
+
+            <div>
+                <button type="button" id="prevBtn1">Previous</button>
+                <button type="button" id="nextBtn1">Next</button>
+            </div>
+        </div>
+
+        <!-- Part 2 del formulari -->
+        <div id="part2">
+            <label>Genere: </label>
+            <select id="Genere" name="Genere">
+                <option value="">Tria una opció</option>
+                <option value="H">Home</option>
+                <option value="D">Dona</option>
+                <option value="O">Altre</option>
+            </select>
+
+            <label for="hobbies">Aficions: <span></span></label>
+            <div id="columnes">
+                <label><input type="checkbox" name="hobbies" value="1" />Esports</label>
+                <label><input type="checkbox" name="hobbies" value="2" />Videojocs</label>
+                <label><input type="checkbox" name="hobbies" value="3" />Cuinar</label>
+                <label><input type="checkbox" name="hobbies" value="4" />Cinema</label>    
+                <label><input type="checkbox" name="hobbies" value="5" />Llegir</label>    
+                <label><input type="checkbox" name="hobbies" value="6" />Motorsport</label>
+                <label><input type="checkbox" name="hobbies" value="7" />Musica</label>  
+                <label><input type="checkbox" name="hobbies" value="8" />Ballar</label>
+            </div>
+
+            <div>
+                <button type="button" id="prevBtn2">Previous</button>
+                <button type="button" id="nextBtn2">Next</button>
+            </div>
+        </div>
+
+        <!-- enviar formulari -->
+        <div id="send">
+            <label for="sub">Subscripció: <span></span></label>
+            <div id="columnes">
+                <label><input type="radio" name="sub" value="1" />1 mes / 9.99€</label>
+                <label><input type="radio" name="sub" value="2" />3 mesos / 24.99</label>
+                <label><input type="radio" name="sub" value="3" />6 mesos / 49.99</label>
+                <label><input type="radio" name="sub" value="4" />1 any / 109.99</label> 
+            </div>
+            <br>
+            <div>
+                <button type="button" id="prevBtn3">Previous</button>
+                <input type="submit" value="Send" />
+            </div>
+        </div>
+    </form>      
+</body>
+    <script src="./funcion.js"></script>
+    <script src="./validation.js"></script>
+</html>

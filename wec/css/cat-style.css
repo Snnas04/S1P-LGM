@@ -1,0 +1,9 @@
+/* Estil de les caracteristiques */
+.caracteristics div {
+    font-size: 10pt;
+}
+
+.content {
+    margin-bottom: 20px;
+    margin-top: -120px;
+}

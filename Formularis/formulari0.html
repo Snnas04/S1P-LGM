@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>formulari0</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* per centrarverticalment hempram les unitats vh */
+            height: 100vh;
+        }
+
+        form {
+            display: grid;
+            grid-template-rows: repeat(5, 30px);
+            grid-template-columns: 400px;
+            row-gap: 5px;
+            box-shadow: 0 0 25px #c00000;
+            padding: 15px;
+        }
+
+        label {
+            align-self: end;
+        }
+
+        input[type="submit"] {
+            width: 80px;
+            justify-self: end;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="get" novalidate="novalidate" onsubmit="return validation();" >
+        <label for="name">Name: <span></span></label>
+        <input type="text" id="name" name="name" 
+            placeholder="Name"
+            title="A name starting with a cappital letter"
+            required="required" 
+            pattern="/^[A-Z][a-zñ]+$/"
+        />
+
+        <label for="email">eMail: <span></span></label>
+        <input type="email" id="email" name="email"
+            placeholder="email"
+            title="electronic mail"
+            required="required"
+            pattern="[a-z]{3,}@[a-z]{3,}[.][a-z]{2,4}"
+        />
+
+        <input type="submit" value="send" />
+    </form>
+</body>
+
+<script src="validation.js" ></script>
+</html>

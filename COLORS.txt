@@ -1,0 +1,15 @@
+lletra -> #13111b
+bg -> #16162c
+border -> #13111b
+
+SIN -> #ee4f43cc
+PRO -> #ff50b6cc
+BDD -> #ffc72ccc
+LGM -> #2bb7fdcc
+FOL -> #48f556cc
+EdD -> #d83ef3cc
+
+Grup bg -> #343977
+Grup lletra -> #fff022d5
+
+D + H -> #98bbd1

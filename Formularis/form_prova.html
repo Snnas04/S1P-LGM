@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>From0</title>
+    <style>
+        form {
+            display: grid;
+            grid-template-columns: 400px;
+            grid-template-rows: repeat(3, auto);
+            row-gap: 8px;
+        }
+
+        input[type="submit"] {
+            width: 90px;
+            height: 30px;
+            justify-self: end;
+        }
+    </style>
+</head>
+<body>
+    <!-- podem posar metodi get o post, post es mes segur -->
+    <form method="get" >
+<!--         
+        <label>Identity: 
+            <input type="text" name="identity" /><span></span>
+        </label>
+        <input type="submit" value="Tiramilles" />
+
+-->
+
+        <!-- si posame l'imput defora de label hem de posar un id a l'imput i un for amb l'id de l'iput al label
+        type -> text = camp per emplenar
+        type -> submit = boto
+        type -> email = email (poc complexe, per aixo posam una exprecio) -->
+        <!-- name es on es s'envien les coses -->
+        <!-- per posat valors per defecta en el lloc de placeholder podem posar value, 
+        o title que quan deixam posat el ratolí d'amunt surt una mostra -->
+        <label for="identity" >Identity: <span></span></label> 
+        <input id="identity" type="text" name="identity" required="required" />
+
+        <label for="email" >email: <span></span></label>
+        <input id="email" type="email" name="email" required="required" pattern="^[a-z]{3,}(([._-])[a-z]{3,})?(\2[a-z]{3,})*@[a-z]{3,}\.[a-z]{2,4}$" />
+
+        <input type="submit" value="Dali cebes" />
+    </form>
+</body>
+</html>

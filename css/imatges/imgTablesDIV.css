@@ -1,0 +1,59 @@
+body {
+    padding: 0;
+}
+
+img {
+    display: block;
+    width: 120px;
+}
+
+div {
+    /* box-sizing: border-box; */
+    height: min-content;
+}
+/* primer */
+body div:first-of-type img:nth-of-type(even) {
+    width: 960px;
+    position: absolute;
+    left: 129px;
+    top: 9px;
+}
+/* segon */
+body div:nth-of-type(2) img:nth-of-type(even) {
+    width: 960px;
+    position: absolute;
+    left: 9px;
+    top: 551px;
+}
+body div:nth-of-type(2) img:nth-of-type(odd) {
+    position: relative;
+    left: 960px;
+}
+
+/* tercer */
+body div:nth-of-type(3) img:nth-of-type(even) {
+    width: 960px;
+    position: absolute;
+    left: 9px;
+    top: 1161px;
+}
+body div:nth-of-type(3) img:nth-of-type(odd) {
+    float: left;
+    left: 960px;
+}
+body div:nth-of-type(3){
+    height: 600px;
+}
+
+/* quart  */
+body div:nth-of-type(4) img:nth-of-type(even) {
+    width: 960px;
+    position: absolute;
+    left: 9px;
+    top: 1715px;
+}
+body div:nth-of-type(4) img:nth-of-type(odd) {
+    position: relative;
+    top: 540px;
+    float: left;
+}

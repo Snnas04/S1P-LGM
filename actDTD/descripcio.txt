@@ -1,0 +1,20 @@
+Tenim una arrel anomenada lliga que conte dos elements, equip i partit. D'aquests elements en podem tenir 0 o més.
+
+L'element equip conte tres elements nomEquip, jugadors, pais i ciutat, que són obligatoris i estadistiques, que és opcionals.
+Estadistiques són opcionals ja que antes de començar la lliga no hi ha cap tipus d'estadistica.
+L'element nomEquip, pais i ciutat són PCDATA.
+
+L'ememet jugador conte tres elements més, aquests són nom, dorsal, posició i tanteos.
+Tots els camps són obligatoris i PCDATA, menys tanteos que es EMPTY.
+A més jugador a de tenir un ID.
+
+L'element estadistiques conte 4 elements, partitsJugats, partitsGuanyats, partitsEmpatats i partitsPerduts.
+Els quatre elements son EMPTY.
+
+L'elemet partit conte tres elements, equipLocal, equipVisitat i estadistica.
+Els tres elements son EMPTY perque en un inici no sabem quins dos equips s'enfrenten.
+L'estadistica conte dos element el resultat del partit i les faltes que ha hagut al partit.
+L'estadistica conte dos elements, el resultat i les faltes.
+Els dos son EMPTY, a més faletes poden ser 0 o més.
+Afagim un IDREF per relacionar les faltes amb el nom del jugador
+

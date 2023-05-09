@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @font-face {
+            font-family: letra;
+            src: url(../images/piratas.webp)
+        }
+    
+        body > div {
+        display: grid;
+        grid-template-rows: repeat (4, 400px);
+        grid-template-columns: repeat(4, 400px);
+        grid-gap: 8px;
+        width: fit-content;
+        margin: auto;
+        }
+        
+        div > div {
+            width: 400px;
+            height: 400px;
+            background-image: uri("../images/piratas.webp"), linear-gradient(red, cyan);
+            background-size: cover;
+            background-position: center;
+            float: left;
+            font-family: letra, sans-serif;
+            font-size: 24pt;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            border-radius: 16px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

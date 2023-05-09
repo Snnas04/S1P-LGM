@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    width="500px"
+    height="500px"
+    viewBox="-10 -10 20 20">
+
+    <defs>
+        <mask id="maskRect">
+            <rect  x="0" y="-10" width="7" height="20" fill="#fff" />
+            <rect  x="0" y="-8.5" width="7" height="7" fill="#000" />
+        </mask>
+    
+        <linearGradient id="shadow" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#000" stop-opacity="0.5"/>
+            <stop offset="25%" stop-color="#000" stop-opacity="1.0"/>
+            <stop offset="55%" stop-color="transparent" stop-opacity="0.0"/>
+            <stop offset="90%" stop-color="transparent" stop-opacity="0.0"/>
+            <stop offset="100%" stop-color="#000" stop-opacity="0.5"/>
+        </linearGradient>
+
+        <g id="maskShadow">
+            <use xlink:href="#pice" mask="url(#maskRect)"/>
+            <use xlink:href="#pice" fill="url(#shadow)" mask="url(#maskRect)"/>
+        </g>
+        <rect id="pice" x="0" y="-10" width="7" height="20" mask="url(#maskRect)" />
+    </defs>
+
+    <rect x="-10" y="-10" width="20" height="20" fill="#16162c" />
+
+    <use xlink:href="#maskShadow" x="1.5" y="0" fill="#c00" />
+    <use xlink:href="#maskShadow" x="1.5" y="0" fill="#df0"  transform="rotate(90)" />
+    <use xlink:href="#maskShadow" x="1.5" y="0" fill="#c0c" transform="rotate(180)" />
+    <use xlink:href="#maskShadow" x="1.5" y="0" fill="#50c" transform="rotate(270)" />
+
+</svg>

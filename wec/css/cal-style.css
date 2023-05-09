@@ -1,0 +1,89 @@
+/* Estructura del calendari */
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(4, auto);
+
+    margin-top: 38px;
+
+    background-image: url("../img/calendar.png");
+    background-repeat: no-repeat;
+    background-size: 1200px;
+}
+
+.celda {
+    display: grid;
+    grid-template-columns: 60px 50px 230px 100px 150px;
+    border: 2px solid var(--second-accent);
+    border-radius: 5px;
+
+    background-color: var(--background);
+    
+    margin: 5px;
+    align-items: center;
+    text-align: center;
+
+    width: 600px;
+    height: 50px;
+}
+
+.celda:hover {
+    display: grid;
+    grid-template-columns: 60px 50px 230px 100px 150px;
+    border: 2px solid var(--second-accent);
+    border-radius: 5px;
+
+    background-color: var(--second-accent);
+    
+    margin: 5px;
+    align-items: center;
+    text-align: center;
+
+    width: 600px;
+    height: 50px;
+}
+
+
+/* Estil de les celdes */
+#title {
+    font-size: 30px;
+    font-family: sono-extraBold;
+    color: var(--accent);
+}
+
+
+#numRace {
+    font-size: 30px;
+    font-family: sono-extraBold;
+    color: #fff;
+
+}
+
+#place {
+    font-size: 20px;
+    font-family: sono-bold;
+    border-right: 4px solid #fff;
+    color: #fff;
+}
+
+#duration {
+    font-size: 20px;
+    font-family: sono-regular;
+    color: #fff;
+}
+
+#day{
+    font-size: 20px;
+    font-family: sono-semiBold;
+    color: #fff;
+}
+
+
+/* tamany de les imatges */
+.content img {
+    width: 50px;
+}
+
+body > div:nth-of-type(2) {
+    align-content: center;
+}

@@ -1,0 +1,178 @@
+.content {
+    display: grid;
+    grid-template-rows: 200px auto;
+
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+}
+
+#message {
+    width: 400px;
+    max-width: 400px;
+    min-width: 400px;
+    height: 200px;
+    max-height: 800px;
+    min-height: 200px;
+    padding-left: 25px;
+    outline: none;
+}
+
+#message:focus {
+    width: 400px;
+    max-width: 400px;
+    min-width: 400px;
+    height: 200px;
+    max-height: 800px;
+    min-height: 200px;
+    padding-left: 25px;
+}
+
+
+#info {
+    display: grid;
+    grid-template-rows: 60px repeat(6, 50px auto);
+    row-gap: 20px;
+
+    font-family: sono-medium;
+}
+
+#title {
+    color: var(--second-accent);
+    font-family: sono-semiBold;
+    font-size: 26pt;
+    margin-top: 8vh;
+}
+
+#section {
+    color: var(--accent);
+    font-family: sono-semiBold;
+    font-size: 20pt;
+    margin-bottom: 25px;
+}
+
+
+input[type="text"] {
+    margin-top: -25px;
+    font-size: 12pt;
+    font-family: sono-regular;
+    padding: 5px;
+    border-style: none;
+    border-bottom: 2px solid var(--second-accent);
+    outline: none;
+}
+
+input[type="text"]:focus {
+    margin-top: -25px;
+    font-size: 12pt;
+    font-family: sono-regular;
+    padding: 4px;
+    border-bottom: 4px solid var(--second-accent);
+}
+
+
+input[type="submit"] {
+    margin-top: 15px;
+    background-color: var(--accent);
+    color: var(--text);
+    border-radius: 8px;
+    width: 200px;
+    height: 50px;
+    font-size: 16pt;
+    font-family: sono-medium;
+}
+
+input[type="submit"]:hover {
+    margin-top: 15px;
+    background-color: var(--accent);
+    color: var(--text);
+    border-radius: 8px;
+    width: 205px;
+    height: 55px;
+    font-size: 18pt;
+    font-family: sono-semiBold;
+}
+
+label {
+    font-size: 15pt;
+    font-family: sono-medium;
+}
+
+textarea {
+    font-size: 12pt;
+    font-family: sono-regular;
+    border-radius: 10px;
+    padding: 5px;
+    border: 2px solid var(--second-accent);
+}
+
+textarea:focus {
+    font-size: 12pt;
+    font-family: sono-regular;
+    border-radius: 10px;
+    padding: 3px;
+    border: 4px solid var(--second-accent);
+}
+
+
+select {
+    background-color: var(--accent);
+    text-align: center;
+    color: var(--text);
+    border-radius: 8px;
+    width: 200px;
+    height: 50px;
+    width: 200px;
+    font-size: 14pt;
+    font-family: sono-medium;
+}
+
+select:hover {
+    background-color: var(--accent);
+    color: var(--text);
+    border-radius: 8px;
+    width: 205px;
+    height: 55px;
+    font-size: 15pt;
+    font-family: sono-semiBold;
+}
+
+
+#confirmation {
+    height: 200px;
+    text-align: center;
+    align-content: center;
+
+    display: none;
+}
+
+#confirmation > div {
+    width: 350px;
+
+    border-radius: 10px;
+    color: var(--text);
+    background-color: var(--accent);
+
+    margin-bottom: 50px;
+    padding: 10px;
+
+    font-size: 30pt;
+    font-family: sono-medium;
+}
+
+#confirmation > a {
+    width: 150px;
+
+    border-radius: 10px;
+    color: #fff;
+    background-color: var(--second-accent);
+
+    padding: 10px;
+
+    font-size: 15pt;
+    font-family: sono-medium;
+}

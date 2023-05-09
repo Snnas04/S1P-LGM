@@ -1,0 +1,199 @@
+/* Estila de la presentacio */
+.content {
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+
+.welcome {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    width: 1200px;
+    margin: auto;
+}
+
+.welcome > img {
+    width: 630px;
+}
+
+#presentationContainer {
+    margin-left: 50px;
+    text-align: justify;
+}
+
+#presentationContainer img {
+    width: 200px;
+}
+
+/* presentecio de les carreres */
+.racePresentation {
+    margin-top: 250px;
+    text-align: center;
+    font-size: 50pt;
+    font-family: sono-bold;
+    color: var(--second-accent);
+}
+
+/* Estil de la proxima sessió 
+dividia amb tres files*/
+.nextSession-Sebering {
+    display: grid;
+    grid-auto-rows: 120px 200px 400px;
+    width: 1200px;
+    margin: auto;
+    margin-top: 80px;
+    background-image: url("../img/next/sebering-wec.jpg");
+    background-size: 1200px;
+    background-repeat: no-repeat;
+}
+
+.nextSession-Portimao {
+    display: grid;
+    grid-auto-rows: 120px 200px 400px;
+    width: 1200px;
+    margin: auto;
+    margin-top: 80px;
+    background-image: url("../img/next/protimao-wec.jpeg");
+    background-size: 1200px;
+    background-repeat: no-repeat;
+}
+
+.nextSession-SPA {
+    display: grid;
+    grid-auto-rows: 120px 200px 400px;
+    width: 1200px;
+    margin: auto;
+    margin-top: 80px;
+    background-image: url("../img/next/spa-wec.jpg");
+    background-size: 1200px;
+    background-repeat: no-repeat;
+}
+
+.nextSession-leMans {
+    display: grid;
+    grid-auto-rows: 120px 200px 400px;
+    width: 1200px;
+    margin: auto;
+    margin-top: 80px;
+    background-image: url("../img/next/leMans.jpg");
+    background-size: 1200px;
+    background-repeat: no-repeat;
+}
+
+.nextSession-monza {
+    display: grid;
+    grid-auto-rows: 120px 200px 400px;
+    width: 1200px;
+    margin: auto;
+    margin-top: 80px;
+    background-image: url("../img/next/monza.jpg");
+    background-size: 1200px;
+    background-repeat: no-repeat;
+}
+
+.nextSession-fuji {
+    display: grid;
+    grid-auto-rows: 120px 200px 400px;
+    width: 1200px;
+    margin: auto;
+    margin-top: 80px;
+    background-image: url("../img/next/fuji.jpg");
+    background-size: 1200px;
+    background-repeat: no-repeat;
+}
+
+.nextSession-barhain {
+    display: grid;
+    grid-auto-rows: 120px 200px 400px;
+    width: 1200px;
+    margin: auto;
+    margin-top: 80px;
+    background-image: url("../img/next/barhain.jpg");
+    background-size: 1200px;
+    background-repeat: no-repeat;
+}
+
+
+/* capsalera de la següent sessio */
+#sessionHead {
+    display: grid;
+    grid-template-columns: 500px 700px;
+}
+
+/* Nom de la següent sessio */
+.sessionName {
+    margin: 15px;
+}
+#time {
+    font-size: 16pt;
+    font-family: sono-regular;
+}
+
+#place {
+    font-size: 32pt;
+    font-family: sono-bold;
+    color: var(--accent);
+}
+
+/* temps per la següent sessio */
+.time {
+    /* display: grid;
+    grid-template-rows: auto; */
+    text-align: end;
+    margin: 15px;
+}
+
+
+.countdown {
+    margin: 15px;
+    color: var(--text);
+    font-family: sono-semiBold;
+}
+
+
+/* cuenta atras */
+#raceButton {
+    padding: 8px;
+    background-color: var(--accent);
+    align-self: center;
+    color: var(--text);
+    font-family: sono-medium;
+}
+
+#raceButton:hover {
+    padding: 9px;
+    background-color: var(--accent);
+    align-self: center;
+    color: var(--text);
+    font-family: sono-semiBold;
+}
+
+/* time line */
+.timeLine {
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+}
+
+#timeLine {
+    margin-left: 20px;
+}
+
+#timeLine div {
+    font-size: 9pt;
+}
+
+#name {
+    font-family: sono-medium;
+}
+
+#when {
+    color: var(--accent);
+}
+
+/* cirqüit */
+.circuit {
+    align-self: center;
+}
+
+.circuit img {
+    width: 580px;
+}

@@ -1,0 +1,96 @@
+@font-face {
+    font-family: agave;
+    src: url("/home/snnas/Programacio/lgm/fonts/agave regular Nerd Font Complete Mono.ttf");
+}
+
+body {
+    background: #16162c;
+}
+
+img {
+    display: block;
+}
+
+img:nth-of-type(2n+1) {
+    width: 160px;
+}
+
+img:nth-of-type(2n+1):hover + img {
+    z-index: 1;
+}
+
+img:nth-of-type(2n) {
+    width: 1280px;
+    position: absolute;
+}
+
+body > div {
+    margin: auto;
+    position: relative;
+    display: flex;
+}
+
+body > div:nth-of-type(-n+2) {
+    width: 1280px;
+    height: 810px;
+    flex-direction: row;
+}
+
+div > div {
+    background: #920e66;
+    width: 1280px;
+    height: 720px;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    font-family: agave;
+    font-weight: bold;
+    font-size: 75pt;
+}
+
+body > div:nth-last-of-type(-n+2) {
+    width: 1440px;
+    height: 720px;
+    flex-direction: column;
+}
+
+body > div:nth-of-type(2n+1) {
+    align-items: flex-start;
+}
+
+body > div:nth-of-type(2n) {
+    align-items: flex-end;
+}
+
+div:nth-of-type(1) > img:nth-of-type(2n) {
+    bottom: 0;
+}
+
+div:nth-of-type(2) > img:nth-of-type(2n) {
+    top: 0;
+}
+
+div:nth-of-type(3) > img:nth-of-type(2n) {
+    right: 0;
+}
+
+div:nth-of-type(4) > img:nth-of-type(2n) {
+    left: 0;
+}
+
+div:nth-of-type(1) > div {
+    bottom: 0;
+}
+
+div:nth-of-type(2) > div {
+    top: 0;
+}
+
+div:nth-of-type(3) > div {
+    right: 0;
+}
+
+div:nth-of-type(4) > div {
+    left: 0;
+}

@@ -1,0 +1,41 @@
+<svg 
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    width="520px"
+    height="900px"
+    viewBox="-26 -45 52 90">
+
+    <defs>
+        <mask id="maskone">
+            <circle r="22" fill="#fff"/>
+            <g fill="#000">
+                <circle r="22" cy="30" />
+                <circle r="22" cy="-15" cx="26" />
+                <circle r="22" cy="-15" cx="-26" />
+            </g>
+        </mask>
+        <circle id="piece" r="21" mask="url(#maskone)" />
+    </defs>
+
+    <g  fill="#e700a2">
+        <use xlink:href="#piece" x="0" y="-30" />
+        <use xlink:href="#piece" x="26" y="15" />
+        <use xlink:href="#piece" x="-26" y="15" />
+        <use xlink:href="#piece" x="0" y="60" />
+    </g>        
+
+    <g  fill="#00a2ff">
+        <use xlink:href="#piece" x="0" y="0" />
+        <use xlink:href="#piece" x="26" y="45" />
+        <use xlink:href="#piece" x="-26" y="45" />
+        <use xlink:href="#piece" x="26" y="-45" />
+        <use xlink:href="#piece" x="-26" y="-45" />
+    </g>
+
+    <g  fill="#f8fc17">
+        <use xlink:href="#piece" x="0" y="30" />
+        <use xlink:href="#piece" x="26" y="-15" />
+        <use xlink:href="#piece" x="-26" y="-15" />
+    </g>        
+     
+</svg>

@@ -1,0 +1,105 @@
+body {
+    background: #16162c;
+}
+
+body > div {
+    width: 900px;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: auto;
+    background-image: url("/home/snnas/Programacio/lgm/images/watter_color.webp");
+    background-blend-mode: multiply;
+    background-size: cover;
+    /* mix-blend-mode: multiply; */
+}
+
+div > div {
+    width: 160px;
+    box-sizing: border-box;
+    border: 2px solid #1b1b11;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+div > div:nth-of-type(-n+7) {
+    width: 100px;
+    height: 100px;
+}
+
+div > div:nth-of-type(n+8) {
+    height: 200px;
+}
+
+div > div:nth-of-type(1),
+div > div:nth-of-type(8),
+div > div:nth-of-type(12),
+div > div:nth-of-type(16),
+div > div:nth-of-type(20),
+div > div:nth-of-type(23) {
+    height: 50px;
+}
+
+div > div:nth-of-type(17) {
+    height: 100px;
+}
+
+div > div:nth-of-type(19),
+div > div:nth-of-type(21),
+div > div:nth-of-type(22) {
+    height: 300px;
+}
+
+/* D + H */
+div > div:nth-of-type(-n+7),
+div > div:nth-of-type(8),
+div > div:nth-of-type(12),
+div > div:nth-of-type(16),
+div > div:nth-of-type(20),
+div > div:nth-of-type(23) {
+    /* background: #98bbd1; */
+    font-weight: bold;
+    font-size: 16pt;
+}
+
+div > div:nth-of-type(1) {
+    background: #343977;
+    color: #fff022d5;
+}
+
+
+/* SIN (9 + 22) */
+div:nth-of-type(13n+9) {
+    background: #ee4f43cc;
+}
+
+/* PRO (10 + 21) */
+div > div:nth-of-type(10),
+div > div:nth-of-type(7n+14) {
+    background: #ff50b6cc;
+}
+
+/* BDD (11 + 15 + 18 + 24) */
+div > div:nth-of-type(11),
+div > div:nth-of-type(9n+15),
+div > div:nth-of-type(18) {
+    background: #ffc72ccc;
+}
+
+/* LGM (13 + 26) */
+div > div:nth-of-type(13n+13) {
+    background: #2bb7fdcc;
+}
+
+/* FOL (17 + 25) */
+div > div:nth-of-type(8n+17) {
+    background: #48f556cc;
+}
+
+/* EdD (19) */
+div > div:nth-of-type(19) {
+    background: #d83ef3cc;
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE contactos [
+    <!ELEMENT contacto (photo?, name, surnames?, phone, business?, email?, socials?, address?, birthday?)>
+    <!ELEMENT photo (#PCDATA)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT surnames (surname+)>
+        <!ELEMENT surname (#PCDATA)>
+    <!ELEMENT phone (#PCDATA)>
+    <!ELEMENT socials (social+)>
+        <!ELEMENT social (#PCDATA)>
+        <!ATTLIST social tipo (instagram | tictok | twitter | facebook | snapchat) #REQUIRED>
+    <!ELEMENT business (#PCDATA)>
+    <!ELEMENT email (#PCDATA)>
+    <!ELEMENT address (#PCDATA)>
+    <!ELEMENT birthday (#PCDATA)>
+]>

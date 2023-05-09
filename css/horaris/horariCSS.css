@@ -1,0 +1,140 @@
+@font-face {
+    font-family: hack;
+    src: url("/home/snnas/Programacio/lgm/fonts/Hack Regular Nerd Font Complete Mono.ttf");
+}
+@font-face {
+    font-family: b-hack;
+    src: url("/home/snnas/Programacio/lgm/fonts/Hack Bold Nerd Font Complete Mono.ttf");
+}
+@font-face {
+    font-family: agave;
+    src: url("/home/snnas/Programacio/lgm/fonts/agave regular Nerd Font Complete Mono.ttf");
+}
+
+body {
+    background: #16162c;
+    color: #13111b;
+}
+
+body > div:nth-of-type(2) {
+    width: 900px;
+    height: 650px;
+    /* per centrar */
+    margin: auto;
+    font-size: 15pt;
+    font-family: agave;
+
+}
+
+body > div:nth-of-type(1) {
+    width: 900px;
+    height: 100px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff022d5;
+    font-size: 36pt;
+    font-family: agave;
+}
+
+body > div:nth-of-type(2) > div {
+    width: 160px;
+    height: 650px;
+    float: left;
+}
+
+body > div:nth-of-type(2) > div:nth-of-type(1) {
+    width: 100px;
+}
+
+/* borde */
+div > div > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    border: 2px solid #13111b;
+}
+
+/* per la primera fila */
+div > div > div:nth-of-type(1) {
+    height: 40px;
+    background: #98bbd1;
+    font-size: 16pt;
+    font-family: b-hack;
+}
+
+/* S1P */
+div > div:nth-of-type(1) > div:nth-of-type(1) {
+    background: #343977;
+    color: #fff022d5;
+    font-family: b-hack;
+    font-size: 18pt;
+}
+
+/* per les hores */
+div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(n+2) {
+    height: 100px;
+    background: #98bbd1;
+    font-size: 16pt;
+    font-family: b-hack;
+}
+
+/* les HORES */
+/* 2 hores */
+div:nth-of-type(2) > div:nth-of-type(n+2) > div:nth-of-type(n+2) {
+    height: 200px;
+}
+
+/* 1 hora */
+div:nth-of-type(2) > div:nth-of-type(4) > div:nth-of-type(2) {
+    height: 100px;
+}
+
+/* 3 hores */
+div:nth-of-type(2) > div:nth-of-type(4) > div:nth-of-type(4),
+div:nth-of-type(2) > div:nth-of-type(5) > div:nth-of-type(n+2) {
+    height: 300px;
+}
+
+/* les ASSIGNATURES */
+/* Sistemes */
+div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2),
+div:nth-of-type(2) > div:nth-of-type(5) > div:nth-of-type(3) {
+    background-color: #ee4f43cc;
+}
+
+/* programació */
+div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3),
+div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(3),
+div:nth-of-type(2) > div:nth-of-type(5) > div:nth-of-type(2) {
+    background-color: #ff50b6cc;
+}
+
+/* base de dades */
+div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4),
+div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(4),
+div:nth-of-type(2) > div:nth-of-type(4) > div:nth-of-type(3),
+div:nth-of-type(2) > div:nth-of-type(6) > div:nth-of-type(2) {
+    background-color: #ffc72ccc;
+} 
+
+/* llenguatge de marques */
+div:nth-of-type(2) > div:nth-of-type(3) > div:nth-of-type(2),
+div:nth-of-type(2) > div:nth-of-type(6) > div:nth-of-type(4) {
+    background-color: #2bb7fdcc;
+}
+
+/* fol */
+div:nth-of-type(2) > div:nth-of-type(4) > div:nth-of-type(2),
+div:nth-of-type(2) > div:nth-of-type(6) > div:nth-of-type(3) {
+    background-color: #48f556cc;
+}
+
+/* entorns */
+div:nth-of-type(2) > div:nth-of-type(4) > div:nth-of-type(4) {
+    background-color: #d83ef3cc;
+}

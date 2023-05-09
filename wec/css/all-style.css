@@ -1,0 +1,25 @@
+.content {
+    display: grid;
+    grid-template-rows: 700px auto;
+    background-image: url("../img/about-us.jpg");
+    background-size: 1200px;
+    background-repeat: no-repeat;
+}
+
+.content > div:nth-of-type(1) {
+    margin-left: 80px;
+    margin-top: 60px;
+}
+
+#title {
+    color: var(--second-accent);
+    font-size: 70pt;
+    font-family: sono-bold;
+}
+
+#text > div:nth-of-type(1) {
+    color: var(--accent);
+    font-size: 16pt;
+    font-family: sono-semiBold;
+}
+

@@ -1,0 +1,47 @@
+<svg 
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+
+    width="520"
+    height="900px"
+    viewBox="-26 -15 52 90"
+>
+
+    <defs>
+        <mask id="mask">
+            <circle r="22" fill="#fff"/>
+            <g fill="#000">
+                <circle r="20" cy="-30" />
+                <circle r="20" cy="15" cx="26" />
+                <circle r="20" cy="15" cx="-26" />
+            </g>
+        </mask>
+
+        <g id="helix" mask="url(#mask)" >
+            <circle r="22" fill="#8caff0" />
+
+            <g fill="#241f64">
+                <circle r="22" cy="-30" />
+                <circle r="22" cy="15" cx="26" />
+                <circle r="22" cy="15" cx="-26" />
+            </g>        
+        </g>
+    </defs>
+
+    <use xlink:href="#helix" transform="rotate(180)" />
+    <use xlink:href="#helix" y="-30" />
+    <use xlink:href="#helix" y="15" x="-26" />
+    <use xlink:href="#helix" y="15" x="26" />
+    <use xlink:href="#helix" transform="rotate(180)" y="-45" x="26" />
+    <use xlink:href="#helix" transform="rotate(180)" y="-45" x="-26" />
+    <!-- <use xlink:href="#helix" y="60" />  -->
+    <use xlink:href="#helix" y="30" />
+    <use xlink:href="#helix" y="75" x="-26" />
+    <use xlink:href="#helix" y="75" x="26" />
+    <use xlink:href="#helix" y="60" />
+
+    <use xlink:href="#helix" y="-15" x="-26" />
+    <use xlink:href="#helix" y="-15" x="26" />
+    <use xlink:href="#helix" transform="rotate(180)" y="-15" x="26" />
+    <use xlink:href="#helix" transform="rotate(60)" y="-15" x="26" />
+</svg>

@@ -1,0 +1,82 @@
+.content {
+    margin-top: -120px;
+}
+
+/* Estructura i estetica de la taula de les rodes */
+#tyreTable {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    width: 1000px;
+    margin: auto;
+}
+
+#tyreTable div {
+    border: 2px solid var(--second-accent);
+    margin: 2px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#tyreTable > div:nth-of-type(1) img {
+    width: 150px;
+}
+
+#top {
+    background-color: var(--background);
+    color: #fff;
+    font-family: sono-bold;
+}
+
+#hypercar {
+    background-color: #f02a2a;
+}
+
+#LMP2 {
+    background-color: #256fdf;
+}
+
+#LMGTE-AM {
+    background-color: #f08a2a;
+}
+
+
+/* Estructura i estetica de la taula de puntuacio */
+#pointTable {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+}
+
+#pointTable div {
+    border: 2px solid var(--second-accent);
+    margin: 2px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#gold {
+    background-color: #ffe922d3;
+    font-family: sono-medium;
+}
+
+#plat {
+    background-color: #c7e0e0;
+    font-family: sono-medium;
+}
+
+#bronze {
+    background-color: #eeb63ed5;
+    font-family: sono-medium;
+}
+
+#pointTable div:nth-of-type(n+17) {
+    background-color: #8cdbff59;
+}
+
+#pointTable div:nth-of-type(1),
+#pointTable div:nth-of-type(2),
+#pointTable div:nth-of-type(3),
+#pointTable div:nth-of-type(4) {
+    background-color: var(--background);
+    color: #fff;
+    font-family: sono-bold;
+}

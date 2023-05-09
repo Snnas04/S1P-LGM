@@ -1,0 +1,76 @@
+<svg
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="-26 -15 52 90"
+        width="520" height="900">
+    <defs>
+        <radialGradient id="filling" gradientUnits="objectBoundingBox">
+            <stop stop-color="#fff" offset="0.5"/>
+            <stop stop-color="#222" offset="1"/>
+        </radialGradient>
+
+        <mask id="retall">
+            <circle r="22" fill="#fff"/>
+            <g fill="#000">
+                <circle r="20" cy="-30"/>
+                <circle r="20" cy="15" cx="26"/>
+                <circle r="20" cy="15" cx="-26"/>
+            </g>
+        </mask>
+        <mask id="sombra">
+            <circle r="22" fill="url(#filling)"/>
+            <g fill="#000">
+                <circle r="20" cy="-30"/>
+                <circle r="20" cy="15" cx="26"/>
+                <circle r="20" cy="15" cx="-26"/>
+            </g>
+        </mask>
+
+        <g id="objecte">
+            <circle r="22"/>
+            <g fill="#000">
+                <circle r="22" cy="-30"/>
+                <circle r="22" cy="15" cx="26"/>
+                <circle r="22" cy="15" cx="-26"/>
+            </g>
+        </g>
+
+        <use id="sin" xlink:href="#objecte" mask="url(#retall)" />
+        <use id="con" xlink:href="#objecte" mask="url(#sombra)" />
+
+        <clipPath id="top">
+            <rect x="-23" y="-23" width="46" height="23" />
+        </clipPath>
+        <clipPath id="down">
+            <rect x="-23" y="-1" width="46" height="23" />
+        </clipPath>
+
+        <use id="zero" xlink:href="#objecte" mask="url(#retall)" fill="#c09" />
+        <g id="one">
+            <use xlink:href="#sin" clip-path="url(#top)" />
+            <use xlink:href="#con" clip-path="url(#down)" />
+        </g>
+        <g id="two">
+            <use xlink:href="#sin" clip-path="url(#down)" />
+            <use xlink:href="#con" clip-path="url(#top)" />
+        </g>
+
+    </defs>
+
+    <use xlink:href="#zero"  />
+    <use xlink:href="#zero" y="45" x="26"/>
+    <use xlink:href="#zero" y="45" x="-26"/>
+
+    <use xlink:href="#zero" y="30"/>
+    <use xlink:href="#zero" y="-15" x="-26"/>
+    <use xlink:href="#zero" y="-15" x="26"/>
+    <use xlink:href="#zero" y="15" x="-26"/>
+    <use xlink:href="#zero" y="15" x="26"/>
+    <use xlink:href="#zero" y="75" x="-26"/>
+    <use xlink:href="#zero" y="75" x="26"/>
+
+    <use xlink:href="#zero" y="60"/>
+
+
+</svg>
+

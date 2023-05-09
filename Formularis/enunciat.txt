@@ -1,0 +1,11 @@
+minim:
+nom i llinatges
+correu
+temes d'interes
+tipo de sub
+control fet nostro (ex: tipo codi postal), posar el retoli damunnt del boto d'enviar mostrar la validació
+---
+numero de telefono
+contrasenya
+data
+un altre boto per comprovar

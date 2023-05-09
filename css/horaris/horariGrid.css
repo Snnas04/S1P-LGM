@@ -1,0 +1,133 @@
+@font-face {
+    font-family: hack;
+    src: url("/home/snnas/Programacio/lgm/fonts/Hack Regular Nerd Font Complete Mono.ttf");
+}
+@font-face {
+    font-family: b-hack;
+    src: url("/home/snnas/Programacio/lgm/fonts/Hack Bold Nerd Font Complete Mono.ttf");
+}
+@font-face {
+    font-family: agave;
+    src: url("/home/snnas/Programacio/lgm/fonts/agave regular Nerd Font Complete Mono.ttf");
+}
+
+body {
+    background: #16162c;
+}
+
+body > div {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 100px repeat(5, 160px);
+    grid-template-rows: 50px repeat(6, 100px);
+    grid-auto-flow: column;
+    gap: 4px;
+}
+
+/* tota la taula */
+div > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* hores + grup + dies (1, 2, 3, 4, 5, 6, 7, 8, 12, 16, 20, 23) */
+div > div:nth-of-type(1),
+div > div:nth-of-type(2),
+div > div:nth-of-type(3),
+div > div:nth-of-type(4),
+div > div:nth-of-type(5),
+div > div:nth-of-type(6),
+div > div:nth-of-type(7),
+div > div:nth-of-type(8),
+div > div:nth-of-type(12),
+div > div:nth-of-type(16),
+div > div:nth-of-type(20),
+div > div:nth-of-type(23) {
+    background: #98bbd1;
+    color: #13111b;
+    font-family: b-hack;
+    font-size: 16pt;
+}
+
+/* classes (9, 10, 11, 13, 14, 15, 17, 18, 19, 21, 22, 24, 25, 26) */
+div > div:nth-of-type(9),
+div > div:nth-of-type(10),
+div > div:nth-of-type(11),
+div > div:nth-of-type(13),
+div > div:nth-of-type(14),
+div > div:nth-of-type(15),
+div > div:nth-of-type(17),
+div > div:nth-of-type(18),
+div > div:nth-of-type(19),
+div > div:nth-of-type(21),
+div > div:nth-of-type(22),
+div > div:nth-of-type(24),
+div > div:nth-of-type(25),
+div > div:nth-of-type(26) {
+    font-family: hack;
+    font-size: 13pt;
+}
+
+/* dues hores */
+div > div:nth-of-type(n+9) {
+    grid-row-end: span 2;
+}
+
+/* una hora */
+div > div:nth-of-type(12),
+div > div:nth-of-type(16),
+div > div:nth-of-type(17),
+div > div:nth-of-type(20),
+div > div:nth-of-type(23) {
+    grid-row-end: span 1;
+}
+
+/* tres hores */
+div > div:nth-of-type(19),
+div > div:nth-of-type(21),
+div > div:nth-of-type(22) {
+    grid-row-end: span 3;
+}
+
+/* el grup */
+div > div:nth-of-type(1) {
+    background: #343977;
+    color: #fff022d5;
+}
+
+/* SIN (9 + 22) */
+div:nth-of-type(13n+9) {
+    background: #ee4f43cc;
+}
+
+/* PRO (10 + 21) */
+div > div:nth-of-type(10),
+div > div:nth-of-type(7n+14) {
+    background: #ff50b6cc;
+}
+
+/* BDD (11 + 15 + 18 + 24) */
+div > div:nth-of-type(11),
+div > div:nth-of-type(9n+15),
+div > div:nth-of-type(18) {
+    background: #ffc72ccc;
+}
+
+/* LGM (13 + 26) */
+div > div:nth-of-type(13n+13) {
+    background: #2bb7fdcc;
+}
+
+/* FOL (17 + 25) */
+div > div:nth-of-type(8n+17) {
+    background: #48f556cc;
+}
+
+/* EdD (19) */
+div > div:nth-of-type(19) {
+    background: #d83ef3cc;
+}
+
+/* display: contents; */

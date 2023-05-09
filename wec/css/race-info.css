@@ -1,0 +1,41 @@
+.content {
+    margin-top: -100px;
+}
+
+#info {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    align-items: center;
+}
+
+#info > img {
+    border: 5px solid var(--accent);
+    width: 400px;
+}
+
+#info p {
+    width: 500px;
+    text-align: center;
+}
+
+#circuit {
+    display: grid;
+    align-content: center;
+    grid-template-columns: repeat(3, auto);
+}
+
+#circuit img {
+    width: 800px;
+}
+
+#circuit div:nth-of-type(2) div {
+    margin-top: 25px;
+    font-family: sono-bold;
+    font-size: 30pt;
+    color: var(--text);
+}
+
+#circuit div:nth-of-type(2) {
+    display: grid;
+    grid-template-rows: auto;
+}

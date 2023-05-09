@@ -1,0 +1,237 @@
+/* Les fonts emprades en el diari */
+@font-face {
+    font-family: mainTitle;
+    src: url("./fonts/Bikers_Church.ttf");
+}
+
+@font-face {
+    font-family: newTitle;
+    src: url("./fonts/Amnestia.ttf");
+}
+
+@font-face {
+    font-family: mainNewTitle;
+    src: url("./fonts/the_beatles.ttf");
+}
+
+@font-face {
+    font-family: mainSubtitle;
+    src: url("./fonts/The_Goldsmith_Vintage.ttf");
+}
+
+@font-face {
+    font-family: mainNewSubtitle;
+    src: url("./fonts/Muffaroo.ttf");
+}
+
+@font-face {
+    font-family: newSubtitle;
+    src: url("./fonts/Bronte.ttf");
+}
+
+@font-face {
+    font-family: text;
+    src: url("./fonts/atwriter.ttf");
+}
+
+@font-face {
+    font-family: elNano;
+    src: url("./fonts/Hand_Crafted.ttf");
+}
+
+@font-face {
+    font-family: numRace;
+    src: url("./fonts/AirAmericanaDEMO-Bold.ttf");
+}
+
+@font-face {
+    font-family: Circusant;
+    src: url("./fonts/Circusant.ttf");
+}
+
+
+/* colors emprats */
+:root {
+    --colorPaper: #e69a79;
+    --colorTinta: #371f15;
+}
+
+
+/* Temanys i estructura de la pagina, el div principal */
+#page {
+    /* 21 x 29.7 es tamany A4 */
+    width: 210mm;
+    height: 297mm;
+    display: grid;
+    grid-template-rows: 30mm 15mm 235mm 10mm;
+    /* background-color: var(--colorPaper); */
+    background-image: url("./img/paper.jpg");
+    color: var(--colorTinta);
+    margin: auto;
+}
+
+/* centram el titol, subtitol i contintingut de la columna principal */
+#page > div:nth-of-type(1),
+#page > div:nth-of-type(2),
+#content > div:nth-of-type(2) {
+    text-align: center;
+}
+
+/* columna principal */
+#mainTitle {
+    font-size: 50pt;
+    border-top: 3px solid var(--colorTinta);
+    border-bottom: 3px solid var(--colorTinta);
+    margin-top: 10mm;
+    margin-left: 10mm;
+    margin-right: 10mm;
+
+    font-family: mainTitle;
+}
+
+#mainSubtitle {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+
+    border: 3px solid var(--colorTinta);
+    margin-top: 2mm;
+    margin-bottom: 2mm;
+    margin-left: 10mm;
+    margin-right: 10mm;
+
+    font-size: 18pt;
+    font-family: mainSubtitle;
+}
+
+#mainNewTitle {
+    font-size: 40pt;
+    font-family: mainNewTitle;
+}
+
+#mainNewSubtitle {
+    font-size: 18pt;  
+    font-family: mainNewSubtitle; 
+}
+
+/* Titols, subtitols i text generals */
+#newTitle {
+    font-size: 20pt;
+    font-family: newTitle;
+}
+
+#newSubtitle {
+    font-size: 13pt;
+    font-family: newSubtitle;
+}
+
+#text {
+    font-size: 8pt;
+    font-family: text;
+}
+
+/* Anunci Fernando Alonso */
+#ad {
+    font-size: 12pt;
+    font-family: elNano;
+}
+
+#numRaces {
+    font-size: 14pt;
+    font-family: numRace;
+}
+
+/* Nom de l'autor */
+#box {
+    font-size: 25pt;
+    font-family: Circusant;
+    margin-top: 3mm;
+}
+
+/* Estructura general de l'estructura del contingut */
+#content {
+    display: grid;
+    grid-template-columns: 50mm 90mm 50mm;
+    margin-left: 10mm;
+    margin-right: 10mm;
+}
+
+/* Estructures de cada coolumna */
+#zone2_c1 {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: 30mm, 20mm;
+}
+
+#zone3_c1 {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+}
+
+/* Adaptacio estetica de les columnes */
+#col1,
+#col3 {
+    border-left: 3px solid var(--colorTinta);
+    border-right: 3px solid var(--colorTinta);
+    margin-bottom: 10mm;
+}
+
+
+#zone1_c2 > div:nth-of-type(4) {
+    border-bottom: 3px solid var(--colorTinta);
+    margin-bottom: 2mm;
+    margin-left: 1mm;
+    margin-right: 1mm;
+}
+
+#zone1_c1,
+#zone3_c1,
+#zone1_c2,
+#zone2_c2,
+#zone1_c3,
+#zone2_c3,
+#zone3_c3 {
+    margin-left: 2mm;
+    margin-right: 2mm;
+}
+
+#zone3_c1,
+#zone2_c3,
+#zone3_c3 {
+    border-top: 3px solid var(--colorTinta);
+    margin-top: 2mm;
+    margin-left: 1mm;
+    margin-right: 1mm;
+}
+
+/* Adaptar tamany de les imatges */
+#plane {
+    width: 85mm;
+}
+
+#wheel {
+    width: 40mm;
+}
+
+#f1 {
+    width: 22mm;
+}
+
+#wine {
+    height: 50mm;
+}
+
+img {
+    filter: sepia(80%);
+    filter: opacity(80%);
+}
+
+#zone2_c1 div:nth-of-type(2) img {
+    filter: brightness(70%);
+}
+
+/* Format dels marcos */
+div[class="marco"] {
+    border: 2px solid var(--colorTinta);
+    margin-left: 1mm;
+    margin-right: 1mm;
+}
