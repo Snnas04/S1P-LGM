@@ -7,7 +7,7 @@
         <html>
             <head>
                 <title>factures</title>
-                <link href="estil.css" rel="stylesheet"/>
+                <link href="llista.css" rel="stylesheet"/>
             </head>
             <body>
                 <table>
@@ -19,22 +19,41 @@
 
     <xsl:template match="factura">
         <xsl:variable name="codi_client" select="comprador/@codi"/>
-        <xsl:variable name="client" select="//client[@codi=$codi_client]"/>
         <tr>
-            <td><xsl:value-of select="@numero"/></td>
-            <td><xsl:value-of select="$client/nom"/></td>
+
+            <td colspan="2"><xsl:value-of select="@numero"/></td>
+            <xsl:apply-templates select="//client[@codi = $codi_client]"/>
         </tr>
+
+        <tr>
+            <td>Codi</td>
+            <td>Producte</td>
+            <td>Preu</td>
+            <td>Unitats</td>
+            <td>Total</td>
+        </tr>
+
         <xsl:for-each select="unitats">
             <xsl:variable name="codi_producte" select="@codi"/>
-            <xsl:variable name="producte" select="//producte[@codi=$codi_producte]"/>
             <tr>
-                <td><xsl:value-of select="$codi_producte"/></td>
-                <td><xsl:value-of select="producte"/></td>
+                <td><xsl:value-of select="@codi"/></td>
+                <xsl:apply-templates select="//producte[@codi = $codi_producte]"/>
                 <td><xsl:value-of select="."/></td>
-                <td><xsl:value-of select="producte/@preu"/></td>
-                <td><xsl:value-of select=". * $producte/@preu"/></td>
+                <td><xsl:value-of select="format-number(. * //producte[@codi = $codi_producte]/@preu, '#.00 €')"/></td>
             </tr>
         </xsl:for-each>
+
+        <tr/>
+
     </xsl:template>
-    
+
+    <xsl:template match="producte">
+        <td><xsl:value-of select="."/></td>
+        <td><xsl:value-of select="@preu"/> €</td>
+    </xsl:template>
+
+    <xsl:template match="client">
+        <td colspan="2"><xsl:value-of select="nom/."/></td>
+    </xsl:template>
+
 </xsl:stylesheet>
