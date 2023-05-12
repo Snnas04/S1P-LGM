@@ -3,9 +3,17 @@ body {
 }
 
 tr:nth-of-type(2n) {
-    background-color: rgba(25, 142, 238, 0.8);
+    background-color: rgba(52, 163, 255, 0.8);
 }
 
 tr:nth-of-type(2n + 1) {
     background-color: rgba(55, 200, 253, 0.85);
+}
+
+#columnes {
+    background-color: #ddff00;
+}
+
+#factura-client {
+    background-color: #35fc00;
 }

@@ -19,13 +19,13 @@
 
     <xsl:template match="factura">
         <xsl:variable name="codi_client" select="comprador/@codi"/>
-        <tr>
+        <tr id="factura-client">
 
             <td colspan="2"><xsl:value-of select="@numero"/></td>
             <xsl:apply-templates select="//client[@codi = $codi_client]"/>
         </tr>
 
-        <tr>
+        <tr id="columnes">
             <td>Codi</td>
             <td>Producte</td>
             <td>Preu</td>
@@ -42,8 +42,6 @@
                 <td><xsl:value-of select="format-number(. * //producte[@codi = $codi_producte]/@preu, '#.00 €')"/></td>
             </tr>
         </xsl:for-each>
-
-        <tr/>
 
     </xsl:template>
 
