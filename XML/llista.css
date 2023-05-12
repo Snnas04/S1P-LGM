@@ -1,5 +1,5 @@
 body {
-    background-color: #1a1a31;
+    background-color: #323249;
 }
 
 tr:nth-of-type(2n) {
@@ -16,4 +16,8 @@ tr:nth-of-type(2n + 1) {
 
 #factura-client {
     background-color: #35fc00;
+}
+
+#totalFactura {
+    background-color: #ff0d00;
 }
