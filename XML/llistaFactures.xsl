@@ -33,16 +33,17 @@
             <td>Total</td>
         </tr>
 
-        <xsl:variable name="total">
+        <xsl:variable name="total_factura">
+            <xsl:variable name="total" select="0"/>
             <xsl:for-each select="unitats">
                 <xsl:variable name="codi_producte" select="@codi"/>
-                <xsl:variable name="preu" select="../producte[@codi = $codi_producte]/@preu"/>
+                <xsl:variable name="preu" select="//producte[@codi = $codi_producte]/@preu"/>
                 <xsl:variable name="quantitat" select="."/>
                 <xsl:variable name="subtotal" select="$preu * $quantitat"/>
-                <xsl:variable name="total_previ" select="0"/>
-                <xsl:variable name="total" select="$total_previ + $subtotal"/>
-                <xsl:value-of select="total"/>
+                <xsl:variable name="acumular_total" select="$total + $subtotal"/>
+                <xsl:variable name="total" select="acumular_total"/>
             </xsl:for-each>
+            <xsl:value-of select="$total"/>
         </xsl:variable>
         
         <xsl:for-each select="unitats">
@@ -58,7 +59,7 @@
         <tr>
             <td colspan="2">Total de la Factura</td>
             <td colspan="3">
-                <xsl:value-of select="format-number($total, '#,00 €')"/>
+                <xsl:value-of select="format-number($total_factura, '#,00 €')"/>
             </td>
         </tr>
         
