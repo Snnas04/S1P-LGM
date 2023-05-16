@@ -35,13 +35,11 @@
 
         <xsl:for-each select="unitats">
             <xsl:variable name="codi_producte" select="@codi"/>
-            <xsl:variable name="suma_productes" select="sum(unitats * //producte[@codi = $codi_producte]/@preu)"/>
             <tr>
                 <td><xsl:value-of select="@codi"/></td>
                 <xsl:apply-templates select="//producte[@codi = $codi_producte]"/>
                 <td><xsl:value-of select="."/></td>
-                <td><xsl:value-of select="format-number(. * //producte[@codi = $codi_producte]/@preu, '#.00 €')"/></td>
-                <td><xsl:value-of select="format-number($suma_productes, '#.00 €')"/></td>
+                <td><xsl:value-of select="format-number(. * //producte[@codi = $codi_producte]/@preu, '#,00 €')"/></td>
             </tr>
         </xsl:for-each>
 
