@@ -33,6 +33,18 @@
             <td>Total</td>
         </tr>
 
+        <xsl:variable name="total">
+            <xsl:for-each select="unitats">
+                <xsl:variable name="codi_producte" select="@codi"/>
+                <xsl:variable name="preu" select="//producte[@codi = $codi_producte]/@preu"/>
+                <xsl:variable name="quantitat" select="."/>
+                <xsl:element name="subtotal">
+                    <xsl:value-of select="$preu * quantitat"/>
+                </xsl:element>
+                <xsl:value-of select="subtotal"/>
+            </xsl:for-each>
+        </xsl:variable>
+        
         <xsl:for-each select="unitats">
             <xsl:variable name="codi_producte" select="@codi"/>
             <tr>
@@ -43,15 +55,22 @@
             </tr>
         </xsl:for-each>
 
+        <tr>
+            <td colspan="2">Total de la Factura</td>
+            <td colspan="3">
+                <xsl:value-of select="format-number(sum($total/subtotal), '#,00 €')"/>
+            </td>
+        </tr>
+        
     </xsl:template>
 
     <xsl:template match="producte">
         <td><xsl:value-of select="."/></td>
-        <td><xsl:value-of select="@preu"/> €</td>
+        <td><xsl:value-of select="format-number(@preu, '#,00€')"/></td>
     </xsl:template>
 
     <xsl:template match="client">
         <td colspan="2"><xsl:value-of select="nom/."/></td>
     </xsl:template>
-
+    
 </xsl:stylesheet>
