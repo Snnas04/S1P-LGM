@@ -34,8 +34,9 @@
                 <h3>Nombre del Cliente: <xsl:value-of select="$client/nom"/></h3>
                 <h3>Código del Cliente: <xsl:value-of select="$codi_client"/></h3>
                 <!-- Telefons clients -->
-                <p>Teléfono 1: <xsl:value-of select="$client/telefon[1]"/></p>
-                <p>Teléfono 2: <xsl:value-of select="$client/telefon[2]"/></p>
+                <h4>Teléfonos</h4>
+                <div id="tel"><xsl:value-of select="$client/telefon[1]"/></div>
+                <div id="tel"><xsl:value-of select="$client/telefon[2]"/></div>
             </div>
 
             <table class="invoice-table">
