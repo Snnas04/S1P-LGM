@@ -21,22 +21,27 @@
         <div class="container">
             <div class="company-info">
                 <!-- Nom de l'empresa -->
-                <h2>Tu Empresa</h2>
+                <h2>Vins Nadal</h2>
                 <!-- Direccio de l'empresa -->
-                <p>Dirección de la Empresa</p>
-                <p>Sencelles, Espanya</p>
-                <p>Teléfono: 123456789</p>
+                <div>Adressa: c/ Ramon Llull, 2</div>
+                <div>Binissalem</div>
+                <div>Teléfono: 971 511 058</div>
             </div>
 
             <div class="customer-details">
                 <!-- codi + nom client -->
-                <h3>Código de Factura: <xsl:value-of select="@numero"/></h3>
-                <h3>Nombre del Cliente: <xsl:value-of select="$client/nom"/></h3>
-                <h3>Código del Cliente: <xsl:value-of select="$codi_client"/></h3>
+                <div class="titol">Código de Factura:</div>
+                <div id="escrit"><xsl:value-of select="@numero"/></div>
+
+                <div class="titol">Nombre del Cliente:</div>
+                <div id="escrit"><xsl:value-of select="$client/nom"/></div>
+
+                <div class="titol">Código del Cliente:</div>
+                <div id="escrit"><xsl:value-of select="$codi_client"/></div>
                 <!-- Telefons clients -->
-                <h4>Teléfonos</h4>
-                <div id="tel"><xsl:value-of select="$client/telefon[1]"/></div>
-                <div id="tel"><xsl:value-of select="$client/telefon[2]"/></div>
+                <div class="titol">Teléfonos:</div>
+                <div class="tel"><xsl:value-of select="$client/telefon[1]"/></div>
+                <div class="tel"><xsl:value-of select="$client/telefon[2]"/></div>
             </div>
 
             <table class="invoice-table">
