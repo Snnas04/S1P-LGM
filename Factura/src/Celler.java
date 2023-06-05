@@ -19,7 +19,7 @@ public class Celler {
             aList = readData("./recursos/apellidos.txt");
             hList = readData("./recursos/hombres.txt");
             mList = readData("./recursos/mujeres.txt");
-            writer = new PrintWriter("celler.xml");
+            writer = new PrintWriter("Celler.xml");
             writeData();
             writer.close();
         }
