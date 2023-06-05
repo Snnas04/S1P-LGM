@@ -135,7 +135,7 @@ public class Celler {
     }
 
     public static void main(String[] args) {
-        new Celler(100, 500);
+        new Celler(100, 100);
     }
 }
 
