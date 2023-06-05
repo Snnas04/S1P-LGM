@@ -21,27 +21,41 @@
         <div class="container">
             <div class="company-info">
                 <!-- Nom de l'empresa -->
-                <h2>Vins Nadal</h2>
+                <h2>(Vins Nadal]</h2>
                 <!-- Direccio de l'empresa -->
-                <div>Adressa: c/ Ramon Llull, 2</div>
+                <div>Adreça: c/ Ramon Llull, 2</div>
                 <div>Binissalem</div>
                 <div>Teléfono: 971 511 058</div>
             </div>
 
             <div class="customer-details">
                 <!-- codi + nom client -->
-                <div class="titol">Código de Factura:</div>
-                <div id="escrit"><xsl:value-of select="@numero"/></div>
+                <div class="titol" id="dadesClient">Código de Factura:</div>
+                <div class="escrit" id="dadesClient"><xsl:value-of select="@numero"/></div>
 
-                <div class="titol">Nombre del Cliente:</div>
-                <div id="escrit"><xsl:value-of select="$client/nom"/></div>
+                <div class="titol" id="dadesClient">Nombre del Cliente:</div>
+                <div class="escrit" id="dadesClient"><xsl:value-of select="$client/nom"/></div>
 
-                <div class="titol">Código del Cliente:</div>
-                <div id="escrit"><xsl:value-of select="$codi_client"/></div>
+                <div class="titol" id="dadesClient">Código del Cliente:</div>
+                <div class="escrit" id="dadesClient"><xsl:value-of select="$codi_client"/></div>
                 <!-- Telefons clients -->
-                <div class="titol">Teléfonos:</div>
-                <div class="tel"><xsl:value-of select="$client/telefon[1]"/></div>
-                <div class="tel"><xsl:value-of select="$client/telefon[2]"/></div>
+                <div class="titol" id="dadesClient">Teléfonos:</div>
+                <div class="tel">
+                    <xsl:choose>
+                        <xsl:when test="$client/telefon">
+                            <xsl:value-of select="$client/telefon[1]"/>
+                        </xsl:when>
+                        <xsl:otherwise>/</xsl:otherwise>
+                    </xsl:choose>
+                </div>
+                <div class="tel">
+                    <xsl:choose>
+                        <xsl:when test="$client/telefon[2]">
+                            <xsl:value-of select="$client/telefon[2]"/>
+                        </xsl:when>
+                        <xsl:otherwise>/</xsl:otherwise>
+                    </xsl:choose>
+                </div>
             </div>
 
             <table class="invoice-table">
@@ -94,12 +108,52 @@
                         <xsl:value-of select="format-number(sum($total/parcial), '#.00 €')"/>
                     </td>
                 </tr>
-            </table>
 
-            <div class="invoice-footer">
-                <!-- Missatge factura -->
-                <p class="message">Gracias por tu compra.</p>
-            </div>
+                <tr>
+                    <td colspan="3" class="total">IVA (21%):</td>
+                    <td>
+                        <xsl:value-of select="format-number(sum($total/parcial) * 0.21, '#.00 €')"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="3" class="total">Total + IVA:</td>
+                    <td>
+                        <xsl:value-of select="format-number(sum($total/parcial) * 1.21, '#.00 €')"/>
+                    </td>
+                </tr>
+
+                <tr class="invoice-bottom">
+                    <td>
+                        <div class="customer-signature">
+                            <div class="titol">Firma del Cliente:</div>
+                            <div class="signature"><xsl:value-of select="concat(substring($client/nom, 1, 1), '.', substring-after($client/nom, ','))"/></div>
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="payment-method">
+                            <div class="titol">Método de Pago:</div>
+                            <div class="method">
+                                <xsl:choose>
+                                    <xsl:when test="position() mod 4 = 0">
+                                        <img src="../img/efectovo.png" alt="Efectivo"/>
+                                    </xsl:when>
+                                    <xsl:when test="position() mod 4 = 1">
+                                        <img src="../img/mastercard.png" alt="Mastercard"/>
+                                    </xsl:when>
+                                    <xsl:when test="position() mod 4 = 2">
+                                        <img src="../img/visa.png" alt="VISA"/>
+                                    </xsl:when>
+                                    <xsl:when test="position() mod 4 = 3">
+                                        <img src="../img/paypal.png" alt="PayPal"/>
+                                    </xsl:when>
+                                </xsl:choose>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
         </div>
     </xsl:template>
 </xsl:stylesheet>

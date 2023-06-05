@@ -1,9 +1,31 @@
+/*FONTS*/
+@font-face {
+    font-family: Rostley;
+    src: url("../Fonts/Rostley_PERSONAL_USE_ONLY.otf");
+}
+
+@font-face {
+    font-family: Firma;
+    src: url("../Fonts/Laneky Haizen.ttf");
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url("../Fonts/roboto/Roboto-Condensed.ttf");
+}
+
+@font-face {
+    font-family: Hand;
+    src: url("../Fonts/Handgley Regular.otf");
+}
+
+/*FORMAT*/
 .container {
     width: 210mm;
     height: 297mm;
-    border: 1.2mm solid #01112f;
+    border: 1mm solid #01112f;
     margin: 3mm;
-    /*border-radius: 10mm;*/
+    border-radius: 10mm;
 }
 
 .container:nth-of-type(2n + 1) {
@@ -13,6 +35,7 @@
 .company-info {
     background-color: #2dacee;
     width: 197mm;
+    height: 60mm;
     padding: 5mm;
     border-radius: 9mm;
     margin-left: 1.5mm;
@@ -21,11 +44,26 @@
 
 .company-info h2 {
     text-align: center;
+    font-family: Rostley;
+    font-size: 55pt;
+}
+
+.company-info div {
+    display: inline-block;
+    font-family: Roboto;
+    margin-left: 25mm;
+}
+
+.customer-details {
+    margin-top: 5mm;
 }
 
 .titol {
+    font-family: Roboto;
+    font-size: 15pt;
     background-color: #5bee4f;
-    width: 45mm;
+    width: 42mm;
+    height: 8mm;
     text-align: left;
     margin-top: 3mm;
     margin-left: 1.5mm;
@@ -37,8 +75,12 @@
     width: 30mm;
 }
 
-#escrit {
+.escrit {
+    font-family: Hand;
+    font-size: 13pt;
+    color: #2d14ee;
     background-color: #b5d2da;
+    height: 8mm;
     padding-left: 2mm;
     margin-left: 1.5mm;
     margin-top: 2mm;
@@ -46,19 +88,27 @@
     border-radius: 3mm;
 }
 
-#escrit:nth-of-type(2),
-#escrit:nth-of-type(6) {
-    width: 20mm;
+.escrit:nth-of-type(2),
+.escrit:nth-of-type(6) {
+    width: 25mm;
 }
 
-#escrit:nth-of-type(4) {
-    width: 80mm;
+.escrit:nth-of-type(4) {
+    width: 83mm;
+}
+
+#dadesClient {
+    display: inline-block;
 }
 
 .tel {
     display: inline-block;
+    font-family: Hand;
+    font-size: 13pt;
+    color: #2d14ee;
     background-color: #b5d2da;
     width: 30mm;
+    height: 8mm;
     margin-top: 2mm;
     margin-bottom: 2mm;
     margin-left: 1.5mm;
@@ -66,7 +116,9 @@
     border-radius: 3mm;
 }
 
+
 .invoice-table {
+    margin-top: 2mm;
     margin-right: auto;
     margin-left: auto;
 }
@@ -82,7 +134,44 @@
 }
 
 .invoice-table td {
+    font-family: Hand;
+    font-size: 12pt;
+    color: #2d14ee;
     border-bottom: 0.3mm solid #000;
     text-align: center;
     min-width: 15mm;
+    padding-left: 2mm;
+    padding-right: 2mm;
+}
+
+.customer-signature {
+    margin-top: 5mm;
+}
+
+.signature {
+    font-family: Firma;
+    font-size: 16pt;
+    background-color: #b5d2da;
+    color: #2d14ee;
+    width: 75mm;
+    height: 15mm;
+    margin-top: 3mm;
+    margin-left: 1.5mm;
+    text-align: center;
+    border-radius: 3mm;
+}
+
+.invoice-bottom {
+    width: 200mm;
+    margin-top: 2mm;
+    margin-left: 15mm;
+}
+
+.method {
+    margin-top: 3mm;
+    margin-left: 1.5mm;
+}
+
+.method img {
+    width: 50mm;
 }
