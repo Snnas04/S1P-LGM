@@ -122,8 +122,10 @@
                         <xsl:value-of select="format-number(sum($total/parcial) * 1.21, '#.00 €')"/>
                     </td>
                 </tr>
+            </table>
 
-                <tr class="invoice-bottom">
+            <table class="invoice-bottom">
+                <tr>
                     <td>
                         <div class="customer-signature">
                             <div class="titol">Firma del Cliente:</div>

@@ -162,10 +162,8 @@
     border-radius: 3mm;
 }
 
-.invoice-bottom {
+.invoice-bottom td {
     width: 200mm;
-    margin-top: 2mm;
-    margin-left: 15mm;
 }
 
 .method {
