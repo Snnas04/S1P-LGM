@@ -144,7 +144,9 @@
                         <div class="customer-signature">
                             <div class="titol">Firma del Cliente:</div>
                             <!-- Firma del client. Inicial del primer nom, un punt, els dos llinatges -->
-                            <div class="signature"><xsl:value-of select="concat(substring($client/nom, 1, 1), '.', substring-after($client/nom, ','))"/></div>
+                            <div class="signature">
+                                <p><xsl:value-of select="concat(substring($client/nom, 1, 1), '.', substring-after($client/nom, ','))"/></p>
+                            </div>
                         </div>
                     </td>
 
