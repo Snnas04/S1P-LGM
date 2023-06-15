@@ -156,16 +156,16 @@
                             <div class="method">
                                 <xsl:choose>
                                     <xsl:when test="position() mod 4 = 0">
-                                        <img src="../img/efectovo.png" alt="Efectivo"/>
+                                        <img src="img/efectovo.png" alt="Efectivo"/>
                                     </xsl:when>
                                     <xsl:when test="position() mod 4 = 1">
-                                        <img src="../img/visa.png" alt="VISA"/>
+                                        <img src="img/visa.png" alt="VISA"/>
                                     </xsl:when>
                                     <xsl:when test="position() mod 4 = 2">
-                                        <img src="../img/paypal.png" alt="PayPal"/>
+                                        <img src="img/paypal.png" alt="PayPal"/>
                                     </xsl:when>
                                     <xsl:otherwise>
-                                        <img src="../img/mastercard.png" alt="Mastercard"/>
+                                        <img src="img/mastercard.png" alt="Mastercard"/>
                                     </xsl:otherwise>
                                 </xsl:choose>
                             </div>

@@ -1,22 +1,22 @@
 /*FONTS*/
 @font-face {
     font-family: Rostley;
-    src: url("../Fonts/Rostley_PERSONAL_USE_ONLY.otf");
+    src: url("Fonts/Rostley_PERSONAL_USE_ONLY.otf");
 }
 
 @font-face {
     font-family: Firma;
-    src: url("../Fonts/Laneky Haizen.ttf");
+    src: url("Fonts/Laneky Haizen.ttf");
 }
 
 @font-face {
     font-family: Roboto;
-    src: url("../Fonts/roboto/Roboto-Condensed.ttf");
+    src: url("Fonts/roboto/Roboto-Condensed.ttf");
 }
 
 @font-face {
     font-family: Hand;
-    src: url("../Fonts/Handgley Regular.otf");
+    src: url("Fonts/Handgley Regular.otf");
 }
 
 /*FORMAT*/
